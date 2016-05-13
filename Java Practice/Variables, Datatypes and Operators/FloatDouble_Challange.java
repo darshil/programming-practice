@@ -13,7 +13,7 @@ public class FloatDouble_Challange {
     // 3. Print out the result
     // 1 pound = 0.45359237 KG
 
-        Scanner reader = new Scanner(System.in);  
+        Scanner reader = new Scanner(System.in);
         System.out.println("Enter a number in Pounds: ");
         double userInput = reader.nextInt();
 
