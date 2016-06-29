@@ -1,7 +1,7 @@
 /**
  * Created by Darshil Patel on 4/26/2016.
  */
-public class variables {
+public class int {
 
     public static void main (String[] args){
 
