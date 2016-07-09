@@ -1,0 +1,34 @@
+
+
+<script type="text/javascript">
+	
+
+function palindrome(str) {
+  str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase(); 
+  // finds all the punctuation and adds replaces it with a space
+
+  str = str.replace(/\s+/g, '');
+  // removes all spaces
+  
+  var y = str.split('').reverse().join('').toLowerCase();
+  // reverses str so it can compare later on
+  var yFinal = y.replace(/\s+/g, '');
+  // removes spaces
+  
+  if (str == yFinal)
+  // if the str and yFinal = true; It  means it's a palindrome
+  {
+    return true;
+    
+  } else {
+  return false;
+  }
+}
+
+// test case
+palindrome("A man, a plan, a canal. Panama");
+
+
+	
+</script>
+	
