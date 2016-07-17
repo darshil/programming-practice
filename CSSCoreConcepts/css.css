@@ -1,0 +1,57 @@
+/* Blog Stylesheet*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 18px;
+	background: #f2f2f2;
+	font-family: Georgia, Times, serif;
+}
+
+h1,h2,h3{
+	font-family: Helvetica,Arial, sans-serif;
+}
+
+#container{
+	width: 760px;
+	margin: 0 auto;
+}
+
+header{
+	text-align: center;
+	background: #fff;
+	color: #1a71b8;
+}
+
+article{
+	background: #fff;
+	padding:20px;
+	margin:20px 0;
+}
+
+article p {
+	margin: 0 0 1em;
+}
+
+section.post-head small {
+	display: block;
+	margin: 0 0 20px;
+	padding:0 0 20px;
+	border-bottom: solid 1px #eee;
+	color: #00c6a0;
+}
+
+section.post-foot{
+	font-size: 14px;
+	border-top: solid 1px #eee;
+	margin:20px 0 0 ;
+	padding:20px 0 0 ;
+}
+footer{
+	text-align: center;
+	color: #aaa;
+	font-size: 14px;
+}
