@@ -1,24 +1,43 @@
 public class MethodsTwo{
     
     
+    // CHALLENGE //
+     
+    
    public static void main (String[] args){
      
-     int highScore = calculateScore(true, 800, 5, 100);
-     System.out.println("Your final score was " + highScore);
-      int highScore2 = calculateScore(true, 10000, 8, 200);
-      System.out.println("Your final score was " + highScore2);
+  int position = calculateHighScorePosition(1500);
+    displayHighScorePosition("Darshil ", position);
+    
+     position = calculateHighScorePosition(900);
+    displayHighScorePosition("Tim Cook ", position);
+    
+     position = calculateHighScorePosition(400);
+    displayHighScorePosition("Steve Jobs ", position);
+    
+     position = calculateHighScorePosition(50);
+    displayHighScorePosition("ANDROID 6.0 ", position);
+    
+    position = calculateHighScorePosition(1000);
+    displayHighScorePosition("Windows 10", position);
     
    }
-    
-   public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
-      
-      if(gameOver){
-         int finalScore = score + (levelCompleted * bonus);
-         finalScore +=1000;
-         return finalScore;
+   
+   public static void displayHighScorePosition( String playerName, int position){
+      System.out.println(playerName + " managed to get into position " + position + " on the highscore table");
+   }
+   
+   public static int calculateHighScorePosition(int playerScore){
+      if (playerScore >= 1000){
+          return 1;
+      }else if(playerScore >= 500 && playerScore < 1000){
+          return 2;
+      }else if (playerScore >= 100 && playerScore < 500 ){
+          return 3;
+      }else {
+           return 4;
       }
-      return 0;
-     
    }
-
+    
+  
 }  
