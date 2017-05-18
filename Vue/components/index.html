@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Components</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
+         <style>
+            .vue-btn {
+                 color: #fff;
+                 background-color: #41B783;
+                 padding: 6px 12px;
+                 border: 1px solid #ccc;
+                 border-radius: 4px;
+                cursor: pointer;
+                }
+        </style>
+       
+    </head>
+    <body>
+        <div id="app">
+           <counter v-bind:add-num="5"></counter>
+        </div>
+        <script>
+            var counter = Vue.component('counter', {
+                template: `
+                   <div>
+                      <div>
+                         Count: {{this.count}}
+                      </div>
+                      <button class="vue-btn" @click="increment">Add by {{addNum}}</button>
+                   </div>
+                `,
+                props: {
+                    addNum: {
+                       type: Number,
+                       default: 1
+                    }
+                },
+                data(){
+                    return{
+                        count: 0
+                    }
+                },
+                methods: {
+                 increment(){
+                    this.count+= this.addNum
+                 }
+                }
+            })
+
+            var app = new Vue({
+                el: '#app',
+                components:{ 
+                    counter
+                }
+            })
+        </script>
+
+    </body>
+</html>
