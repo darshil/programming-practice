@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Buttons</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
+        <style>
+            .vue-btn {
+                 color: #fff;
+                 background-color: #41B783;
+                 padding: 6px 12px;
+                 border: 1px solid #ccc;
+                 border-radius: 4px;
+                cursor: pointer;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <button class="vue-btn" v-on:click="reveal">Reveal the secret Number</button>
+        </div>
+       
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data:{ 
+                    secretNumber: Math.floor(Math.random() * 100) + 1
+                },
+                methods: {
+                    reveal() {
+                        alert(`Here's the secret number: ${this.secretNumber}`)
+                    }
+                }
+            })
+        </script>
+
+    </body>
+</html>
