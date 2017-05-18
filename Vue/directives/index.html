@@ -5,13 +5,14 @@
     </head>
     <body>
         <div id="app">
-           <div v-bind:title="randNum">Hover for Random Number </div>
+           <div v-bind:title="randNum"  >Hover for Random Number </div>
         </div>
         <script>
             var app = new Vue({
                 el: '#app',
                 data:{ 
-                    randNum: Math.floor(Math.random() * 50 ) + 1 
+                    randNum: Math.floor(Math.random() * 50 ) + 1,
+                    
                 }
             })
         </script>

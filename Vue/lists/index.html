@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Lists</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <li v-for="color in colors" v-if="color.primary">{{color.text}}</li>
+            </ul>
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data:{ 
+                   colors: [
+                       {
+                           text: 'red',
+                           primary: true
+                       },
+                       {
+                           text: 'blue',
+                           primary: true
+                       },
+                       {
+                           text: 'green',
+                           primary: false
+                       },
+                       {
+                           text: 'yellow',
+                           primary: true
+                       },
+                       {
+                           text: 'orange',
+                           primary: false
+                       }
+                   ] 
+                }
+            })
+        </script>
+
+    </body>
+</html>
